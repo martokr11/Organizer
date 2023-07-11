@@ -1,9 +1,11 @@
 <template>
-aaa
+
+<topMenu/>
+
 </template>
 
-<script>
-
+<script setup>
+import topMenu from './homepage_menus/topMenu.vue'
 </script>
 
 <style scoped>
