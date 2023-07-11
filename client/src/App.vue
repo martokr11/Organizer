@@ -1,0 +1,12 @@
+<script setup>
+import homePage from './components/homePage.vue'
+</script>
+
+<template>
+
+<homePage/>
+
+</template>
+
+<style>
+</style>
