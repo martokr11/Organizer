@@ -1,7 +1,9 @@
 <template>
-    <q-toolbar class="bg-primary text-white">
-        <q-toolbar-title class="header">Organizer</q-toolbar-title>
-    </q-toolbar>
+    <q-header class="bg-green-14 text-white">
+        <q-toolbar class="text-white">
+            <q-toolbar-title class="header">Organizer</q-toolbar-title>
+        </q-toolbar>
+    </q-header>
 </template>
 
 <script setup>
