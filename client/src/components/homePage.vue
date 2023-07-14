@@ -6,7 +6,7 @@
     <q-page-container>
     <q-page>
         <div class='grid-container'>
-            <taskList/>
+            <taskList class="taskListStyle"/>
             <div class="grid-container2">
                 <div class="bg-pink-6">2</div>
                 <div class="bg-blue-6">3</div>
@@ -40,4 +40,7 @@
   display: grid;
   grid-template-rows: repeat(2, 1fr);
 }
+/* .taskListStyle{
+  display: grid;
+} */
 </style>
