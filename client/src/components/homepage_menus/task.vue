@@ -5,8 +5,8 @@
         <div class="text-subtitle2"> {{ task.date }} </div>
       </q-card-section>
 
-      <q-card-actions vertical align="right">
-        <q-btn flat>Action 1</q-btn>
+      <q-card-actions vertical align="center">
+        <q-card-section flat>Action 1</q-card-section>
         <q-btn flat>Action 2</q-btn>
       </q-card-actions>
     </q-card>

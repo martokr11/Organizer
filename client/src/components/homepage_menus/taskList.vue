@@ -1,5 +1,7 @@
 <template>
-  <task v-for="task in TaskList" :key="task.id" :task = "task"/>
+    <div>
+        <task v-for="task in TaskList" :key="task.id" :task = "task"/>
+    </div>
 </template>
 
 <script setup>
