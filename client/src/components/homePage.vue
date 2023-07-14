@@ -6,7 +6,7 @@
     <q-page-container>
     <q-page>
         <div class="row">
-            <div class="bg-green-6 column col-6"></div>
+            <taskList class="column col-6"/>
             <div class="column col-6">
                 <div class="bg-pink-6">2</div>
                 <div class="bg-blue-6">3</div>
@@ -21,6 +21,7 @@
 
     import topMenu from './homepage_menus/topMenu.vue'
     import leftDrawer from './homepage_menus/leftDrawer.vue'
+    import taskList from './homepage_menus/taskList.vue'
 
 </script>
 
