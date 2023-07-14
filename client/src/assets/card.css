@@ -1,0 +1,23 @@
+.cardHeader{
+    background-color: #B799FF;
+    display: flex;
+    justify-content: center;
+}
+.textTask{
+    font-size: 20px;
+    text-align: center;
+}
+.editBtn{
+    justify-self: auto;
+}
+.cardLayout{
+    height: auto;
+    width: 240px;
+    padding: 7px;
+    box-shadow: none;
+    border: solid;
+    border-width: 1px;
+    border-color: silver;
+    margin: 15px;
+    background-color: none;
+}

@@ -1,19 +1,23 @@
 <template>
-    <q-card class="my-card">
-      <q-card-section class="bg-teal text-white">
-        <div class="text-h6"> {{ task.id }} </div>
-        <div class="text-subtitle2"> {{ task.date }} </div>
+    <q-card class="cardLayout">
+      <q-card-section class="cardHeader">
+        <div class="textTask"> {{ task.id }} </div>
+        <q-btn round color="amber" glossy text-color="black" icon="layers_clear" class="editBtn"/>
       </q-card-section>
 
       <q-card-actions vertical align="center">
-        <q-card-section flat>Action 1</q-card-section>
-        <q-btn flat>Action 2</q-btn>
+        <q-card-section flat> {{ task.typeClass }} </q-card-section>
+        <q-card-section flat> {{ task.date }} </q-card-section>
       </q-card-actions>
     </q-card>
 </template>
 
 <script setup>
+import '../../assets/card.css';
+
     const props = defineProps({
         task: Object,
     })
 </script>
+
+<style></style>

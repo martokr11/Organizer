@@ -9,17 +9,17 @@
 
     const TaskList = [
         {
-        id: '1',
+        id: 'Algebra',
         date: '21.07.2023',
         typeClass: 'Math'
         },
         {
-        id: '2',
+        id: 'Aerodynamics',
         date: '22.07.2023',
         typeClass: 'Fluid Mechanics' 
         },
         {
-        id: '3',
+        id: 'Kinetics',
         date: '23.07.2023',
         typeClass: 'Mechanics' 
         }
