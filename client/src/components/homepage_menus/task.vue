@@ -2,12 +2,15 @@
     <q-card class="cardLayout">
       <q-card-section class="cardHeader">
         <div class="textTask"> {{ task.id }} </div>
-        <q-btn round color="amber" glossy text-color="black" icon="layers_clear" class="editBtn"/>
+        <q-btn round color="secondary" icon="done" class="doneBtn"/>
+        <q-btn round color="amber" glossy text-color="black" icon="settings" class="editBtn"/>
       </q-card-section>
 
       <q-card-actions vertical align="center">
-        <q-card-section flat> {{ task.typeClass }} </q-card-section>
-        <q-card-section flat> {{ task.date }} </q-card-section>
+        <q-card-section flat> Subject: {{ task.typeClass }} </q-card-section>
+        <q-card-section flat> Status: {{ task.status }} </q-card-section>
+        <q-card-section flat> Due: {{ task.dueDate }} </q-card-section>
+        <q-card-section flat> Description: {{ task.description }} </q-card-section>
       </q-card-actions>
     </q-card>
 </template>

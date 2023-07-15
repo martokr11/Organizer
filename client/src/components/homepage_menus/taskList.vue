@@ -10,18 +10,28 @@
     const TaskList = [
         {
         id: 'Algebra',
-        date: '21.07.2023',
-        typeClass: 'Math'
+        dueDate: '21.07.2023',
+        typeClass: 'Math',
+        status: 'active',
+        description: 'aaa',
+        taskRequirements: 'asd',
+
         },
         {
         id: 'Aerodynamics',
-        date: '22.07.2023',
-        typeClass: 'Fluid Mechanics' 
+        dueDate: '22.07.2023',
+        typeClass: 'Fluid Mechanics',
+        status: 'active',
+        description: 'aaa',
+        taskRequirements: 'asd',
         },
         {
         id: 'Kinetics',
-        date: '23.07.2023',
-        typeClass: 'Mechanics' 
+        dueDate: '23.07.2023',
+        typeClass: 'Mechanics',
+        status: 'active',
+        description: 'aaa',
+        taskRequirements: 'asd',
         }
     ];
 

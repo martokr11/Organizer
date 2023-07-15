@@ -10,6 +10,10 @@
 .editBtn{
     justify-self: auto;
 }
+.doneBtn{
+    justify-self: auto;
+    height: 10px;
+}
 .cardLayout{
     height: auto;
     width: 240px;
