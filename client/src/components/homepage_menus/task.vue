@@ -1,9 +1,9 @@
 <template>
-    <q-card class="cardLayout">
+    <q-card class="cardLayout" style="float: left;">
       <q-card-section class="cardHeader">
         <div class="textTask"> {{ task.id }} </div>
-        <q-btn round color="secondary" icon="done" class="doneBtn"/>
-        <q-btn round color="amber" glossy text-color="black" icon="settings" class="editBtn"/>
+        <q-btn round color="secondary" size="sm" icon="done" class="doneBtn"/>
+        <q-btn round color="amber" size="sm" glossy text-color="black" icon="settings" class="editBtn"/>
       </q-card-section>
 
       <q-card-actions vertical align="center">

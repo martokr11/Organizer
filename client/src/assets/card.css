@@ -4,7 +4,7 @@
     justify-content: center;
 }
 .textTask{
-    font-size: 20px;
+    font-size: auto;
     text-align: center;
 }
 .editBtn{
@@ -12,11 +12,11 @@
 }
 .doneBtn{
     justify-self: auto;
-    height: 10px;
+    height: 6px;
 }
 .cardLayout{
     height: auto;
-    width: 240px;
+    width: 170px;
     padding: 7px;
     box-shadow: none;
     border: solid;

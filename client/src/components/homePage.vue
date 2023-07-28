@@ -8,7 +8,7 @@
         <div class='grid-container'>
             <taskList class="taskListStyle"/>
             <div class="grid-container2">
-                <div class="bg-pink-6">2</div>
+                <div class="bg-pink-6"> <calendar/> </div>
                 <div class="bg-blue-6">3</div>
             </div>
         </div>
@@ -22,6 +22,7 @@
     import topMenu from './homepage_menus/topMenu.vue'
     import leftDrawer from './homepage_menus/leftDrawer.vue'
     import taskList from './homepage_menus/taskList.vue'
+    import calendar from './homepage_menus/calendar.vue'
 
 </script>
 
@@ -40,7 +41,18 @@
   display: grid;
   grid-template-rows: repeat(2, 1fr);
 }
-/* .taskListStyle{
-  display: grid;
-} */
+.taskListStyle{
+  overflow:scroll;
+  overflow-x:hidden;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #cdfc8f;
+  border-radius: 10px;
+}
 </style>
