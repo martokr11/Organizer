@@ -1,0 +1,29 @@
+.calendar{
+    
+    border: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    width: 90%;
+    height: 90%;
+}
+.calendarHeader{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 45px;
+}
+.calendarMonth{
+    font-size: 25px;
+    text-align: left;
+}
+.moveMonth{
+    height: 28px;
+    width: 50px;
+    border-radius: 8px;
+    border-width: 2px;
+    border: solid;
+    background-color: yellow;
+}
+.moveBtns{
+    justify-content: right;
+
+}
