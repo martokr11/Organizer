@@ -1,13 +1,15 @@
 .calendar{
-    
     border: solid;
     border-radius: 5px;
     border-width: 2px;
     width: 90%;
     height: 90%;
+    padding: 0;
+    margin-left: 5%;
+    margin-top: 12px;
 }
 .calendarHeader{
-    display: grid;
+    display: grid;  
     grid-template-columns: repeat(2, 1fr);
     height: 45px;
 }
@@ -21,9 +23,43 @@
     border-radius: 8px;
     border-width: 2px;
     border: solid;
-    background-color: yellow;
+    background-color: #FFE7A0;
+    margin-top: 5px;
+    margin-right: 5px;
+    margin-bottom: 0;
 }
 .moveBtns{
+    display: flex;
     justify-content: right;
 
+}
+/* .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+    width: 75%;
+    height: 75%;
+  }
+  .days > div {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  } */
+.days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 5px;
+}
+.day{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
 }

@@ -10,7 +10,6 @@
         <q-card-section flat> Subject: {{ task.typeClass }} </q-card-section>
         <q-card-section flat> Status: {{ task.status }} </q-card-section>
         <q-card-section flat> Due: {{ task.dueDate }} </q-card-section>
-        <q-card-section flat> Description: {{ task.description }} </q-card-section>
       </q-card-actions>
     </q-card>
 </template>

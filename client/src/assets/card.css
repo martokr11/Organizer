@@ -8,10 +8,10 @@
     text-align: center;
 }
 .editBtn{
-    justify-self: auto;
+    justify-self: right;
 }
 .doneBtn{
-    justify-self: auto;
+    justify-self: right;
     height: 6px;
 }
 .cardLayout{

@@ -1,79 +1,73 @@
 <template>
     <div class="calendar">
       <div class="calendarHeader">
-        <h2 class="calendarMonth">{{ currentMonth }}</h2>
+        <p class="calendarMonth">{{ currentMonth }}</p>
         <div class="moveBtns">
             <q-btn @click="prevMonth" class="moveMonth" icon="arrow_left" rounded></q-btn>
             <q-btn @click="nextMonth" class="moveMonth" icon="arrow_right"></q-btn>
         </div>
         </div>    
       <div class="days">
-        <div v-for="day in daysInMonth" :key="day">{{ day }}</div>
+        <div v-for="day in daysInMonth" :key="day" @click="test" class="day">{{ day }}</div>
       </div>
     </div>
   </template>
   
-  <script>
-import '../../assets/calendar.css'
 
-  export default {
-    data() {
-      return {
-        currentDate: new Date(),
-      };
-    },
-    computed: {
-      currentMonth() {
-        const options = { month: 'long', year: 'numeric' };
-        return this.currentDate.toLocaleDateString('en-US', options);
-      },
-      daysInMonth() {
-        const days = [];
-        const totalDays = new Date(
-          this.currentDate.getFullYear(),
-          this.currentDate.getMonth() + 1,
-          0
-        ).getDate();
-        for (let i = 1; i <= totalDays; i++) {
-          days.push(i);
-        }
-        return days;
-      },
-    },
-    methods: {
-      prevMonth() {
-        this.currentDate.setMonth(this.currentDate.getMonth() - 1);
-      },
-      nextMonth() {
-        this.currentDate.setMonth(this.currentDate.getMonth() + 1);
-      },
-    },
-  };
-  </script>
-  
-  <style>
-  .header {  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+
+<script setup>
+import '../../assets/calendar.css'
+import { ref, computed } from 'vue';
+
+// Get the current date
+const currentDate = new Date();
+
+// Reactive variables
+const currentMonthIndex = ref(currentDate.getMonth());
+const currentYear = ref(currentDate.getFullYear());
+
+// Compute the number of days in the current month
+const daysInMonth = computed(() => {
+  const lastDay = new Date(currentYear.value, currentMonthIndex.value + 1, 0).getDate();
+  return Array.from({ length: lastDay }, (_, index) => index + 1);
+});
+
+// Compute the current month name
+const currentMonth = computed(() => {
+  const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  return monthNames[currentMonthIndex.value];
+});
+
+// Function to navigate to the previous month
+const prevMonth = () => {
+  if (currentMonthIndex.value === 0) {
+    currentYear.value--;
+    currentMonthIndex.value = 11;
+  } else {
+    currentMonthIndex.value--;
   }
-  
-  .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-gap: 5px;
-    margin-top: 10px;
+};
+
+// Function to navigate to the next month
+const nextMonth = () => {
+  if (currentMonthIndex.value === 11) {
+    currentYear.value++;
+    currentMonthIndex.value = 0;
+  } else {
+    currentMonthIndex.value++;
   }
+};
+
+const test = (day) => {
+  console.log(day.target);
+}
+</script>
   
-  .days > div {
-    text-align: center;
-    padding: 5px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-  }
-  
-  button {
-    cursor: pointer;
-  }
-  </style>
+<style>
+
+button {
+  cursor: pointer;
+}
+</style>
   

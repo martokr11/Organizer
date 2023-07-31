@@ -32,7 +32,7 @@
         status: 'active',
         description: 'aaa',
         taskRequirements: 'asd',
-        }
+        },
     ];
 
 
