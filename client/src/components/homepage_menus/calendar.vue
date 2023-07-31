@@ -1,20 +1,17 @@
 <template>
-    <div class="calendar">
-      <div class="calendarHeader">
-        <p class="calendarMonth">{{ currentMonth }}</p>
-        <div class="moveBtns">
-            <q-btn @click="prevMonth" class="moveMonth" icon="arrow_left" rounded></q-btn>
-            <q-btn @click="nextMonth" class="moveMonth" icon="arrow_right"></q-btn>
-        </div>
-        </div>    
-      <div class="days">
-        <div v-for="day in daysInMonth" :key="day" @click="test" class="day">{{ day }}</div>
+  <div class="calendar">
+    <div class="calendarHeader">
+      <p class="calendarMonth">{{ currentMonth }}</p>
+      <div class="moveBtns">
+          <q-btn @click="prevMonth" class="moveMonth" icon="arrow_left" rounded></q-btn>
+          <q-btn @click="nextMonth" class="moveMonth" icon="arrow_right"></q-btn>
       </div>
+      </div>    
+    <div class="days">
+      <div v-for="day in daysInMonth" :key="day" @click="test" class="day">{{ day }}</div>
     </div>
-  </template>
-  
-
-
+  </div>
+</template>
 
 <script setup>
 import '../../assets/calendar.css'
