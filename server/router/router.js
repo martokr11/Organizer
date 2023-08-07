@@ -1,10 +1,10 @@
 const express = require('express');
-const Tasks   = require('../controller/OrgController');
+const Org     = require('../controller/OrgController');
 
 const router  = express.Router();  
 
 
-router.post('/Org/GetTasks', Tasks.GetTasks);
+router.post('/Org/GetTasks', Org.GetTasks);
 
 
 module.exports = router;   

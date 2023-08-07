@@ -1,5 +1,4 @@
 const GetTasks = async (req, res) => {
-  console.log("AA")
   const TaskList = [
     {
       id: 'Algebra',
