@@ -4,6 +4,8 @@ const cors    = require('cors'           );
 const path    = require('path'           );
 const router  = require('./router/router');
 
+require('./db/db')
+
 const app = express();
 
 app.use(express.json({limit: '50mb'}));
