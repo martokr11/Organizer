@@ -7,7 +7,7 @@
 <script setup>
   import { ref } from 'vue';
   import Utils   from '../../utils/utils.js';    
-  import task    from './task.vue';
+  import task from '../homepage_menus/task.vue';
 
   const TaskList = ref([]);
 

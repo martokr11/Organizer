@@ -11,8 +11,9 @@ async function run() {
     // const collection = db.collection('blogs');
 
     // Find the first document in the collection
-    const first = await collection.findOne();
-    console.log(first);
+    // const first = await collection.findOne();
+    // console.log(first);
+  
   } finally {
     // Close the database connection when finished or an error occurs
     await client.close();

@@ -5,7 +5,8 @@
         v-model="date"
         :events="events"
         mask="DD/MM/YYYY" 
-        style="width: 500px;"
+        style="width: 500px; border-radius: 10px;"
+        color="light-green-14"
       />
     </div>
   </div>
