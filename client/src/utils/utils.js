@@ -5,7 +5,7 @@ import { Loading, Notify } from 'quasar';
 export default class Utils {
   static Get(_url, _is_spinner = false) {
     if (_is_spinner) var spinner = Loading.show();
-    const result = axios.get(_url);
+    const result = axios.get("~" + _url);
     result.catch(error => {
       if (_is_spinner) Loading.hide();
       Utils.DialogErr(error.toString());
@@ -16,7 +16,7 @@ export default class Utils {
   static Post(_url, _data, _is_spinner = false, _responseType = 'json') {
     if (_is_spinner) var spinner = Loading.show({ spinnerColor : 'green-4' });
     
-    const result = axios.post(_url, _data, { responseType: _responseType, contentType: 'application/json' });
+    const result = axios.post("~" + _url, _data, { responseType: _responseType, contentType: 'application/json' });
     result.catch(error => {
       if (_is_spinner) Loading.hide();
       return Utils.DialogErr(error.code);
