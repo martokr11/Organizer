@@ -4,7 +4,7 @@
       <q-date 
         v-model="date"
         :events="events"
-        mask="MM/DD/YYYY" 
+        mask="DD/MM/YYYY" 
         style="width: 500px;"
       />
     </div>
@@ -13,15 +13,10 @@
 
 <script setup>
   import { ref } from 'vue';
-  let today = new Date().toLocaleDateString();
+  import moment from 'moment'
+  let today = moment(new Date()).format("DD/MM/YYYY");
+  console.log(today)
 
-  const p1 = '0' + today.split('/')[0];
-  const p2 = '0' + today.split('/')[1];
-  const p3 =       today.split('/')[2];
-
-  today = `${p1}/${p2}/${p3}`;
-
- 
   const date = ref(today);
   const events = [ '2019/02/01', '2019/02/05', '2019/02/06', '2019/02/09', '2019/02/23' ];
 
