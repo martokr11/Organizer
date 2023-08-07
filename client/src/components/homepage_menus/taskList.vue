@@ -5,35 +5,14 @@
 </template>
 
 <script setup>
-    import task from './task.vue';
+  import { ref } from 'vue';
+  import Utils   from '../../utils/utils.js';    
+  import task    from './task.vue';
 
-    const TaskList = [
-        {
-        id: 'Algebra',
-        dueDate: '21.07.2023',
-        typeClass: 'Math',
-        status: 'active',
-        description: 'aaa',
-        taskRequirements: 'asd',
+  const TaskList = ref([]);
 
-        },
-        {
-        id: 'Aerodynamics',
-        dueDate: '22.07.2023',
-        typeClass: 'Fluid Mechanics',
-        status: 'active',
-        description: 'aaa',
-        taskRequirements: 'asd',
-        },
-        {
-        id: 'Kinetics',
-        dueDate: '23.07.2023',
-        typeClass: 'Mechanics',
-        status: 'active',
-        description: 'aaa',
-        taskRequirements: 'asd',
-        },
-    ];
-
-
+  // created async
+  (async () => {
+    TaskList.value = (await Utils.Post('/Org/GetTasks', 1000)).data;
+  })();
 </script>

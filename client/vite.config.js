@@ -18,7 +18,7 @@ export default defineConfig({
     host: "127.0.0.1",
     proxy: {
       '/~': {
-        target: 'https://127.0.0.1:1313',
+        target: 'http://127.0.0.1:1313',
         rewrite: path => path.replace(/^\/~/, ''),
       }
     }

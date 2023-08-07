@@ -18,11 +18,11 @@
 </template>
 
 <script setup>
-
-    import topMenu from './homepage_menus/topMenu.vue'
-    import leftDrawer from './homepage_menus/leftDrawer.vue'
-    import taskList from './homepage_menus/taskList.vue'
-    import calendar from './homepage_menus/calendar.vue'
+  import Utils   from "../utils/utils.js";
+  import topMenu from './homepage_menus/topMenu.vue'
+  import leftDrawer from './homepage_menus/leftDrawer.vue'
+  import taskList from './homepage_menus/taskList.vue'
+  import calendar from './homepage_menus/calendar.vue'
 
 </script>
 
