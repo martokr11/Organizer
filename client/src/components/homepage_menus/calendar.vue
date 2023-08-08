@@ -7,6 +7,7 @@
         mask="DD/MM/YYYY" 
         style="width: 500px; border-radius: 10px;"
         color="light-green-14"
+        landscape
       />
     </div>
   </div>
